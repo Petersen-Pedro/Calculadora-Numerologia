@@ -1,0 +1,31 @@
+body{
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre, .nacimiento {
+    display: flex;
+    flex-direction: column;
+}
+.nombre > input {
+    width: 20ch;
+}
+
+#dia_nacimiento,#mes_nacimiento, #anio_nacimiento, #hora_nacimiento, #min_nacimiento {
+    width: 3ch;
+}
+#anio_nacimiento{
+    width: 4ch;
+}
+#abuela{
+    width: 30ch;
+}

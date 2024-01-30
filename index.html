@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Numerologia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <article>
+        <form action="" method="post">
+            <fieldset class="nombre">
+                <label for="nombre1">1er Nombre</label>
+                <input type="text" name="nombre1" id="nombre1" placeholder="Obligatorio" required>
+
+                <label for="nombre2">2do Nombre</label>
+                <input type="text" name="nombre2" id="nombre2" placeholder="Opcional">
+
+                <label for="nombre3">3er Nombre</label>
+                <input type="text" name="nombre3" id="nombre3" placeholder="Opcional">
+
+                <label for="apellido1">1er Apellido</label>
+                <input type="text" name="apellido1" id="apellido1" placeholder="Obligatorio" required>
+
+                <label for="apellido2">2do Apellido</label>
+                <input type="text" name="apellido2" id="apellido2" placeholder="Opcional">
+            </fieldset>
+
+            <fieldset class="nacimiento">
+                <legend>Nacimiento</legend>
+                <div>
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input type="text" name="dia_nacimiento" id="dia_nacimiento" placeholder="dd" required
+                        maxlength="2">
+                    <label for="">/</label>
+                    <input type="text" name="mes_nacimiento" id="mes_nacimiento" placeholder="mm" required
+                        maxlength="2">
+                    <label for="">/</label>
+                    <input type="text" name="anio_nacimiento" id="anio_nacimiento" placeholder="aaaa" required
+                        maxlength="4">
+                </div>
+                <div>
+                    <label for="horaNacimiento">Hora de nacimiento</label>
+                    <input type="text" name="hora_nacimiento" id="hora_nacimiento" placeholder="hh" required
+                        maxlength="2">
+                    <label for="">:</label>
+                    <input type="text" name="min_nacimiento" id="min_nacimiento" placeholder="mm" required
+                        maxlength="2">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Abuela Materna</legend>
+                <label for="">Nombre completo de la abuela materna</label>
+                <input type="text" name="abuela" id="abuela" placeholder="Obligatorio" required>
+            </fieldset>
+
+        </form>
+    </article>
+
+
+</body>
+
+</html>
