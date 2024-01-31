@@ -10,8 +10,9 @@
 
 <body>
     <article>
-        <form action="" method="post">
+        <form action="" method="post" id="calcular">
             <fieldset class="nombre">
+                <legend>Nombre y Apellido</legend>
                 <label for="nombre1">1er Nombre</label>
                 <input type="text" name="nombre1" id="nombre1" placeholder="Obligatorio" required>
 
@@ -57,10 +58,29 @@
                 <input type="text" name="abuela" id="abuela" placeholder="Obligatorio" required>
             </fieldset>
 
+            <input type="submit" value="Calcular">
         </form>
     </article>
 
-
+    <article>
+        
+        <section>
+            <h2>Persona</h2>
+            <p>Nombre: </p>
+            <p>Apellido: </p>
+            <p>Fecha de nacimiento: </p>
+            <p>Hora de nacimiento: </p>
+            <p>Abuela materna: </p>
+        </section>
+        <section>
+            <h2>Numerología de los nombres y apellidos</h2>
+            <p>Alma: </p>
+            <p>Personalidad: </p>
+        </section>
+        
+    </article>
+        
+    <script src="JS/app.js" ></script>
 </body>
 
 </html>
