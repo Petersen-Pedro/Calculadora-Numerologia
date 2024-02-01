@@ -55,6 +55,7 @@ function sumarDigitos(arreglo) {
 function buscarVocales(dato) {
     console.log("buscarVocales -> dato: " + dato);
     let resultado = [];
+    dato = dato.toString().toLowerCase();
     for (let i = 0; i < dato.length; i++) {
         if (dato[i] == 'a' || dato[i] == 'e' || dato[i] == 'i' || dato[i] == 'o' || dato[i] == 'u') {
             resultado.push(dato[i]);

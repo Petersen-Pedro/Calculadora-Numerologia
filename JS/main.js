@@ -12,7 +12,7 @@ function calcularDatos(e) {
 
     let nombre1 = formData.get('nombre1');
     let nombre2 = formData.get('nombre2');
-    let nombre3 = formData.get('nombre2');
+    let nombre3 = formData.get('nombre3');
     let apellido1 = formData.get('apellido1');
     let apellido2 = formData.get('apellido2');
     let dia = formData.get('dia_nacimiento');
