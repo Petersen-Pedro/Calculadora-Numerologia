@@ -30,22 +30,30 @@ function calcularDatos(e) {
     // Calcular Numerología de los nombres y apellidos
 
     const alma = calcularAlma(nombreCompleto);
-
-    console.log("alma: " + alma);
-
-    /*
     const personalidad = calcularPersonalidad(nombreCompleto);
     const expresion = calcularExpresion(alma, personalidad);
 
+    console.log("alma: " + alma);
+    console.log("--------------------------");
+    console.log("personalidad: " + personalidad);
+    console.log("--------------------------");
+    console.log("expresion: " + expresion);
+    
+    
+    
     // Calcular Camino de vida
     const caminoVida = calcularCaminoVida(horaNacimiento);
-
+    console.log("caminoVida: " + caminoVida);
+    
     // Calcular Apellido de la Abuela Materna
     const apellidoAbuela = calcularApellidoAbuela(abuela);
-
+    console.log("apellidoAbuela: " + apellidoAbuela);
+    
     // Calcular Casas de la Personalidad
     const casasPersonalidad = calcularCasasPersonalidad(nombreCompleto);
-
+    console.log("casasPersonalidad: " + casasPersonalidad);
+    
+    
     // Calcular Miedos Inconscientes
     const miedosInconscientes = calcularMiedosInconscientes(casasPersonalidad);
 
@@ -71,5 +79,5 @@ function calcularDatos(e) {
 
     // Calcular Ciclos y Realizaciones
     const CiclosRealizaciones = calcularCiclosRealizaciones(dia, mes, anio);
-    */
+    
 }

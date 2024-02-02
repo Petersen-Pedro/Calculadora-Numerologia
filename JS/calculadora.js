@@ -13,3 +13,43 @@ function calcularAlma(nombreCompleto){
     return resultado;
 }
 
+function calcularPersonalidad(nombreCompleto){
+    console.log("calcularPersonalidad -> nombreCompleto: " + nombreCompleto+"---------------");
+    let caracteres = separarCaracteres(nombreCompleto);
+    let vocales = buscarConsonantes(caracteres);
+    let numerologia = calcularNumerologia(vocales);
+    let resultado = reducirNumero(numerologia);
+    return resultado;
+}
+
+
+function calcularExpresion(alma, personalidad){
+    let expresion = calcularExpresionNumerologia(alma, personalidad);
+    return expresion;
+}
+
+function calcularCaminoVida(horaNacimiento){
+    let resultado = reducirNumero(separarCaracteres(horaNacimiento));
+    return resultado;
+}
+
+function calcularApellidoAbuela(abuela){
+    let abuelaSola = eliminarEspacios(abuela);
+    let caracteres = separarCaracteres(abuelaSola);
+    let numerologia = calcularNumerologia(caracteres);
+    let resultado = reducirNumero(numerologia);
+    return resultado;
+}
+
+function calcularCasasPersonalidad(nombreCompleto){
+    let caracteres = separarCaracteres(nombreCompleto);
+    let numerologia = calcularNumerologia(caracteres);
+    let resultado = contarNumeros(numerologia);
+    return resultado;
+}
+
+function calcularMiedosInconscientes(casasPersonalidad){
+    let matriz = construirMatriz(casasPersonalidad);
+    return matriz;
+}
+
