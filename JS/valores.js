@@ -128,6 +128,8 @@ function calcularExpresionNumerologia(alma, personalidad) {
 }
 
 function eliminarEspacios(cadena) {
-    let resultado = cadena.replace(/[^a-zA-Z]/g, '');
+    let resultado = cadena.replace(/[^a-zA-Z]/g, ''); 
+    //Expesion irregular
+    //regex101.com para testear expresiones regulares
     return resultado;
 }

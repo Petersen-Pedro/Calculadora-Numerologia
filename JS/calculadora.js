@@ -43,8 +43,11 @@ function calcularApellidoAbuela(abuela){
 
 function calcularCasasPersonalidad(nombreCompleto){
     let caracteres = separarCaracteres(nombreCompleto);
+    console.log("calcularCasasPersonalidad -> caracteres: " + caracteres);
     let numerologia = calcularNumerologia(caracteres);
+    console.log("calcularCasasPersonalidad -> numerologia: " + numerologia);
     let resultado = contarNumeros(numerologia);
+    console.log("calcularCasasPersonalidad -> resultado: " + resultado);
     return resultado;
 }
 
