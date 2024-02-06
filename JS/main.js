@@ -34,34 +34,39 @@ function calcularDatos(e) {
     const expresion = calcularExpresion(alma, personalidad);
 
     console.log("alma: " + alma);
-    console.log("--------------------------");
     console.log("personalidad: " + personalidad);
-    console.log("--------------------------");
     console.log("expresion: " + expresion);
     
+    console.log("--------------------------");
     
     
     // Calcular Camino de vida
     const caminoVida = calcularCaminoVida(horaNacimiento);
-    console.log("caminoVida: " + caminoVida);
+    console.log("--------------------------");
     
+    console.log("--------------------------");
     // Calcular Apellido de la Abuela Materna
     const apellidoAbuela = calcularApellidoAbuela(abuela);
     console.log("apellidoAbuela: " + apellidoAbuela);
+    console.log("--------------------------");
     
     // Calcular Casas de la Personalidad
     const casasPersonalidad = calcularCasasPersonalidad(nombreCompleto);
     console.log("casasPersonalidad: " + casasPersonalidad);
-    
+    console.log("--------------------------");
+    /*
     
     // Calcular Miedos Inconscientes
     const miedosInconscientes = calcularMiedosInconscientes(casasPersonalidad);
-
+    console.log("--------------------------");
+    
     // Calcular Misión de Vida
     const misionVida = calcularMisionVida(dia, mes, anio, expresion);
-
+    console.log("--------------------------");
+    
     // Calcular Dia de Nacimiento: Una Virtud a Desarrollar
-
+    console.log("--------------------------");
+    
     // Calcular Numero de la Fuerza: Donde se encuentra la Fuerza Interior del Ser y Como Usarla para Avanzar mas Rapido
     const numeroFuerza = calcularNumeroFuerza(dia, mes);
 
@@ -79,5 +84,5 @@ function calcularDatos(e) {
 
     // Calcular Ciclos y Realizaciones
     const CiclosRealizaciones = calcularCiclosRealizaciones(dia, mes, anio);
-    
+    */
 }
