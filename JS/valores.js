@@ -60,10 +60,10 @@ function buscarVocales(dato) {
     let resultado = [];
     dato = dato.toString().toLowerCase();
     for (let i = 0; i < dato.length; i++) {
-        if (dato[i] == 'a' || 
-            dato[i] == 'e' || 
-            dato[i] == 'i' || 
-            dato[i] == 'o' || 
+        if (dato[i] == 'a' ||
+            dato[i] == 'e' ||
+            dato[i] == 'i' ||
+            dato[i] == 'o' ||
             dato[i] == 'u') {
             resultado.push(dato[i]);
         }
@@ -118,28 +118,57 @@ function contarNumeros(numerologia) {
 }
 
 function construirMatriz(casasPersonalidad) {
-    let matriz = Array.from({ length: 9 }, () => Array(3).fill(0));
-    for (let columna = 0; columna < 9; columna++) {
-        for (let fila = 0; fila < 3; fila++) {
-            let indice = columna * 3 + fila;
-            matriz[fila][columna] = casasPersonalidad[indice];
+    let matriz = [];
+    matriz.push(casasPersonalidad);
+    for (let i = 1; i <= 2; i++) {
+        let fila = [];
+        for (let j = 1; j < 10; j++) {
+            //let y = matriz[i-1][j];
+            let x = matriz[i-1][j-1]; 
+            if(x == 0){
+                fila.push(0);
+            } else {
+                fila.push(matriz[0][x-1]); 
+            }
         }
+        matriz.push(fila);
     }
-    for (let fila = 0; fila < 3; fila++) {
-        //console.log(matriz[fila].join(' | '));
+    
+    // for para imprimir matriz
+    for (let i = 0; i < 3; i++) {
+        let fila = [];
+        for (let j = 0; j < 9; j++) {
+            fila.push(matriz[i][j]);
+        }
+        console.log(fila);
     }
+
     return matriz;
 }
 
 function calcularExpresionNumerologia(alma, personalidad) {
-    let valor = parseInt(alma[alma.length-1]) + parseInt(personalidad[personalidad.length-1]);
+    let valor = parseInt(alma[alma.length - 1]) + parseInt(personalidad[personalidad.length - 1]);
     return valor;
 }
 
 function eliminarEspacios(cadena) {
-    let resultado = cadena.replace(/[^a-zA-Z]/g, ''); 
+    let resultado = cadena.replace(/[^a-zA-Z]/g, '');
     //Expesion irregular
     //regex101.com para testear expresiones regulares
     return resultado;
 }
 
+function tomarIniciales(nombreCompletoArr) {
+    let resultado = [];
+    for (let i = 0; i < nombreCompletoArr.length; i++) {
+        resultado.push(nombreCompletoArr[i].charAt(0));//charAt(0) para tomar la primera letra
+    }
+    return resultado;
+}
+
+function tomarVocalPrimeraUltima(vocales) {
+    let resultado = [];
+    resultado.push(vocales[0]);
+    resultado.push(vocales[vocales.length - 1]);
+    return resultado;
+}

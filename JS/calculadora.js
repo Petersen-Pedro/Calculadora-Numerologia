@@ -25,7 +25,8 @@ function calcularPersonalidad(nombreCompleto){
 
 function calcularExpresion(alma, personalidad){
     let expresion = calcularExpresionNumerologia(alma, personalidad);
-    return expresion;
+    let resultado = reducirNumero(expresion);
+    return resultado;
 }
 
 function calcularCaminoVida(horaNacimiento){
@@ -51,5 +52,40 @@ function calcularCasasPersonalidad(nombreCompleto){
 function calcularMiedosInconscientes(casasPersonalidad){
     let matriz = construirMatriz(casasPersonalidad);
     return matriz;
+}
+
+function calcularMisionVida(dia, mes, anio, expresion){
+    let arreglo = [dia, mes, anio, expresion[0]];
+    console.log("arreglo: " + arreglo);
+    let resultado = reducirNumero(arreglo);    
+    return resultado;
+}
+
+function calcularNumeroFuerza(dia, mes){
+    let arreglo = [dia, mes];
+    let resultado = reducirNumero(arreglo);
+    return resultado;
+}
+
+function calcularNumeroEquilibrio(nombreCompletoArr){
+    let iniciales = tomarIniciales(nombreCompletoArr);
+    let numerologia = calcularNumerologia(iniciales);
+    let resultado = reducirNumero(numerologia);
+    return resultado;
+}
+
+function calcularDesafioAlma(nombreCompleto){
+    let caracteres = separarCaracteres(nombreCompleto);
+    let vocales = buscarVocales(caracteres);
+    let vocalPrimeraUltima = tomarVocalPrimeraUltima(vocales);
+    let numerologia = calcularNumerologia(vocalPrimeraUltima);
+    let resultado = reducirNumero(numerologia);
+    return resultado;
+}
+
+function calcularDesafioEspiritu(alma, expresion, dia, caminoVida){
+    let arreglo = [alma[alma.length - 1], expresion[expresion.length - 1], dia, caminoVida[caminoVida.length - 1]];
+    let resultado = reducirNumero(arreglo);
+    return resultado;
 }
 

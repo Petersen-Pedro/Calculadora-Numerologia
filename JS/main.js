@@ -26,6 +26,7 @@ function calcularDatos(e) {
     console.log(horaNacimiento + ":" + minutoNacimiento);
     console.log(abuela);
     const nombreCompleto = nombre1 + nombre2 + nombre3 + apellido1 + apellido2;
+    const nombreCompletoArr = [nombre1, nombre2, nombre3, apellido1, apellido2];
 
     // Calcular Numerología de los nombres y apellidos
 
@@ -54,31 +55,42 @@ function calcularDatos(e) {
     const casasPersonalidad = calcularCasasPersonalidad(nombreCompleto);
     console.log("casasPersonalidad: " + casasPersonalidad);
     console.log("--------------------------");
-    /*
     
     // Calcular Miedos Inconscientes
+    console.log("miedosInconscientes: ");
     const miedosInconscientes = calcularMiedosInconscientes(casasPersonalidad);
     console.log("--------------------------");
     
     // Calcular Misión de Vida
     const misionVida = calcularMisionVida(dia, mes, anio, expresion);
+    console.log("misionVida: " + misionVida);
     console.log("--------------------------");
     
     // Calcular Dia de Nacimiento: Una Virtud a Desarrollar
-    console.log("--------------------------");
+    console.log("Dia de Nacimiento: Una Virtud a Desarrollar: " + dia + "/" + mes + "/" + anio);
+    
     
     // Calcular Numero de la Fuerza: Donde se encuentra la Fuerza Interior del Ser y Como Usarla para Avanzar mas Rapido
     const numeroFuerza = calcularNumeroFuerza(dia, mes);
-
+    console.log("Numero de la Fuerza: " + numeroFuerza);
+    console.log("--------------------------");
+    
     // Calcular Numero del Equilibrio: En que tenemos interés
-    const numeroEquilibrio = calcularNumeroEquilibrio(nombreCompleto);
-
+    const numeroEquilibrio = calcularNumeroEquilibrio(nombreCompletoArr);
+    console.log("Numero del Equilibrio: " + numeroEquilibrio);
+    console.log("--------------------------");
+    
     // Calcular Desafío del Alma
     const DesafioAlma = calcularDesafioAlma(nombreCompleto);
+    console.log("Desafío del Alma: " + DesafioAlma);
+    console.log("--------------------------");
 
     // Calcular Desafío del Espiritu e Iniciación
     const DesafioEspiritu = calcularDesafioEspiritu(alma, expresion, dia, caminoVida);
+    console.log("Desafío del Espiritu e Iniciación: " + DesafioEspiritu);
+    console.log("--------------------------");
     
+    /*
     // Calcular Desafío de la Personalidad
     const DesafioPersonalidad = calcularDesafioPersonalidad(nombreCompleto);
 
