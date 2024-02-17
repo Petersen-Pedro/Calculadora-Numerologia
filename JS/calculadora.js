@@ -89,3 +89,11 @@ function calcularDesafioEspiritu(alma, expresion, dia, caminoVida){
     return resultado;
 }
 
+function calcularDesafioPersonalidad(nombreCompleto){
+    let caracteres = separarCaracteres(nombreCompleto);
+    let consonantes = buscarConsonantes(caracteres);
+    let consonantePrimeraUltima = tomarConsonantePrimeraUltima(consonantes);
+    let numerologia = calcularNumerologia(consonantePrimeraUltima);
+    let resultado = reducirNumero(numerologia);
+    return resultado;
+}

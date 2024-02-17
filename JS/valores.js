@@ -55,6 +55,15 @@ function sumarDigitos(arreglo) {
     return valor;
 }
 
+function restarDigitos(arreglo) {
+    //console.log("restarDigitos -> arreglo: " + arreglo);
+    let valor = 0;
+    for (let i = 0; i < arreglo.length; i++) {
+        valor -= parseInt(arreglo[i]);
+    }
+    return valor;
+}
+
 function buscarVocales(dato) {
     ////console.log("buscarVocales -> dato: " + dato);
     let resultado = [];
@@ -172,3 +181,11 @@ function tomarVocalPrimeraUltima(vocales) {
     resultado.push(vocales[vocales.length - 1]);
     return resultado;
 }
+
+function tomarConsonantePrimeraUltima(consonantes) {
+    let resultado = [];
+    resultado.push(consonantes[0]);
+    resultado.push(consonantes[consonantes.length - 1]);
+    return resultado;
+}
+

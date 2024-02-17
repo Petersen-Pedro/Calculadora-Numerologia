@@ -90,11 +90,57 @@ function calcularDatos(e) {
     console.log("Desafío del Espiritu e Iniciación: " + DesafioEspiritu);
     console.log("--------------------------");
     
-    /*
     // Calcular Desafío de la Personalidad
     const DesafioPersonalidad = calcularDesafioPersonalidad(nombreCompleto);
+    console.log("Desafío de la Personalidad: " + DesafioPersonalidad);
+    console.log("--------------------------");
 
     // Calcular Ciclos y Realizaciones
-    const CiclosRealizaciones = calcularCiclosRealizaciones(dia, mes, anio);
+    //const CiclosRealizaciones = calcularCiclosRealizaciones(dia, mes, anio);
+
+    calcularCiclosRealizaciones(dia, mes, anio);
+
+    function calcularCiclosRealizaciones(dia, mes, anio){
+
+        let cicloFormatiovo = reducirNumero([mes]);
+        let realizacionFormativo = reducirNumero([dia, mes]);
+        let periodoFormativo = 36 - caminoVida;
+
+        let cicloProductivo = reducirNumero([dia]);
+        let realizacionProductivoA = reducirNumero([dia, anio]);
+        let periodoProductivoA = periodoFormativo - 9;
+        let realizacionProductivoB = realizacionFormativo - realizacionProductivoA;
+        let periodoProductivoB = periodoProductivoA - 9;
+
+        let cicloCosecha = reducirNumero([anio]);
+        let realizacionCosecha = reducirNumero([anio, mes]);
+        let periodoCosecha = periodoProductivoB - 9;
+
+        console.log("Camino de Vida =====================");
+        console.log("Ciclos - Realizaciones - Periodos");
+        console.log("[] Formativo:");
+        console.log(" - Ciclo: " + cicloFormatiovo + 
+                    " - Realización: " + realizacionFormativo + 
+                    " - Periodo: " + periodoFormativo);
+    
+        console.log("[] Productivo:");
+        console.log(" - Ciclo: " + cicloProductivo);
+        console.log(" - RealizaciónA: " + realizacionProductivoA + 
+                    " - PeriodoA: " + periodoProductivoA);
+        console.log(" - RealizaciónB: " + realizacionProductivoB + 
+                    " - PeriodoB: " + periodoProductivoB);
+    
+        console.log("[] Cosecha:");
+        console.log(" - Ciclo: " + cicloCosecha + 
+                    " - Realización: " + realizacionCosecha + 
+                    " - Periodo: " + periodoCosecha);
+    }
+
+
+
+
+
+
+    /*
     */
 }
